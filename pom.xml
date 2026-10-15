@@ -8,6 +8,14 @@
 
     <name>Simple Password Utility</name>
     <description>A reusable Java library for Argon2id password hashing and verification.</description>
+    
+    <distributionManagement>
+	    <repository>
+	        <id>github</id>
+	        <name>GitHub Packages</name>
+	        <url>https://maven.pkg.github.com/samdjoyce/Simple_Password_Utility</url>
+	    </repository>
+	</distributionManagement>
 
     <properties>
         <maven.compiler.release>17</maven.compiler.release>

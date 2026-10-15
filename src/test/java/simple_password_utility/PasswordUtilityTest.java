@@ -1,14 +1,15 @@
 
 package simple_password_utility;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import passwordUtility.PasswordUtility;
-
 class PasswordUtilityTest {
-
     @Test
     void hashPasswordReturnsEncodedHash() {
         char[] password = "TestPassword123!".toCharArray();

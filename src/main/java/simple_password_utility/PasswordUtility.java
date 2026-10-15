@@ -1,4 +1,4 @@
-package passwordUtility;
+package simple_password_utility;
 
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
