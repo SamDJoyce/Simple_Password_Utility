@@ -44,7 +44,7 @@ public final class PasswordUtility {
             );
         } finally {
         	// Erase the unhashed password from the provided array
-            argon2.wipeArray(password);
+        	java.util.Arrays.fill(password, '\0');
         }
     }
 
@@ -61,18 +61,19 @@ public final class PasswordUtility {
     	if (passwordIsNull(password)) {
         	throw new IllegalArgumentException("Password cannot be null");
         }
-    	// Validate hash is not null
-        if (hashIsNull(hash)) {
-        	throw new IllegalArgumentException("Hash cannot be null");
-        }
+
     	// Create the argon2 object
     	Argon2 argon2 = createArgon2();
     	// Compare stored hash and supplied password
         try {
+        	// Validate hash is not null
+            if (hashIsNull(hash)) {
+            	throw new IllegalArgumentException("Hash cannot be null");
+            }
             return argon2.verify(hash, password);
         } finally {
         	// Wipe the provided array
-            argon2.wipeArray(password);
+        	java.util.Arrays.fill(password, '\0');
         }
     }
     
