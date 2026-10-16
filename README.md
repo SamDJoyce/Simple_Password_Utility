@@ -96,8 +96,3 @@ mvn javadoc:javadoc
 ```
 
 The packaged JAR is generated under `target/`, and the HTML documentation is generated under `target/site/apidocs/`.
-
-
-## License
-
-Specify the project's license before distribution. Review the licensing terms of the Argon2 dependency as well.
